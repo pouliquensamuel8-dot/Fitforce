@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Fit Force</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+try {
+  const saved = localStorage.getItem('ff-theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+} catch (e) {}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-chip"><img src="assets/logo.png" alt="Fit Force" class="brand-logo"></span>
+    </a>
+    <a href="index.html" class="btn btn-outline btn-small header-cta" style="margin-left:auto;">Retour au site</a>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+      <svg viewBox="0 0 24 24" class="icon icon-sun"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      <svg viewBox="0 0 24 24" class="icon icon-moon"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="section legal-content">
+    <div class="container">
+      <span class="section-tag">Vos données</span>
+      <h2>Politique de confidentialité</h2>
+
+      <h3>Responsable du traitement</h3>
+      <p>
+        Samuel Pouliquen, éditeur du site Fit Force, est responsable du traitement des données
+        collectées via ce site. Contact : pouliquensamuel8@gmail.com.
+      </p>
+
+      <h3>Données collectées</h3>
+      <p>
+        Ce site ne collecte pas de données via un formulaire propre. La prise de rendez-vous se
+        fait via l'outil tiers Calendly : si vous réservez un créneau, Calendly collecte votre
+        nom, votre email et les informations que vous saisissez, selon sa propre politique de
+        confidentialité, disponible sur calendly.com.
+      </p>
+      <p>
+        Le site utilise également le stockage local de votre navigateur (localStorage) pour
+        mémoriser votre choix de thème (clair/sombre) et votre choix concernant les cookies
+        Calendly. Ces informations restent sur votre appareil et ne sont pas transmises à Fit
+        Force.
+      </p>
+
+      <h3>Cookies</h3>
+      <p>
+        Le widget Calendly n'est chargé qu'après votre accord explicite via le bandeau affiché sur
+        le site. Tant que vous n'avez pas accepté, aucun cookie Calendly n'est déposé. Vous pouvez
+        modifier votre choix à tout moment via le lien "Gérer les cookies" en bas de page.
+      </p>
+
+      <h3>Vos droits</h3>
+      <p>
+        Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un
+        droit d'accès, de rectification et de suppression des données vous concernant. Pour toute
+        demande, contactez-nous à pouliquensamuel8@gmail.com.
+      </p>
+
+      <h3>Partage des données</h3>
+      <p>
+        Fit Force ne vend ni ne partage vos données avec des tiers à des fins commerciales. Seul
+        Calendly, en tant que prestataire technique de prise de rendez-vous, peut être amené à
+        traiter certaines informations que vous lui transmettez directement.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="brand-chip footer-chip"><img src="assets/logo.png" alt="Fit Force" class="footer-logo"></span>
+    <p>Fit Force — Samuel Pouliquen, coach sportif indépendant.<br>
+       Prestataire de services à la personne déclaré URSSAF — Rennes et agglomération.</p>
+    <p class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <span aria-hidden="true">·</span>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </p>
+    <p class="footer-copy">&copy; <span id="year"></span> Fit Force. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
