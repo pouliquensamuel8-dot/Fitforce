@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pouliquensamuel8-dot.github.io/fitforce/sitemap.xml
