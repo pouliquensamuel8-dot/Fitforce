@@ -14,26 +14,6 @@ if (navToggle && mainNav) {
   });
 }
 
-// Theme toggle
-const themeToggle = document.getElementById('theme-toggle');
-const root = document.documentElement;
-
-function currentTheme() {
-  return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-}
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const next = currentTheme() === 'light' ? 'dark' : 'light';
-    if (next === 'dark') {
-      root.removeAttribute('data-theme');
-    } else {
-      root.setAttribute('data-theme', 'light');
-    }
-    try { localStorage.setItem('ff-theme', next); } catch (e) {}
-  });
-}
-
 // Cookie consent (Calendly)
 const cookieBanner = document.getElementById('cookie-banner');
 const cookieAccept = document.getElementById('cookie-accept');
