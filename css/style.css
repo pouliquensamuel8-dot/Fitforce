@@ -373,25 +373,42 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   border: 1px solid var(--border);
   aspect-ratio: 4/3;
+  overflow: hidden;
 }
-.zone-svg { width: 100%; height: 100%; }
-.zone-ring { fill: none; stroke: var(--border); }
-.zone-cross { stroke: var(--border); stroke-dasharray: 2 4; }
-.zone-pin circle { fill: var(--gold-2); }
-.zone-pin text {
-  fill: var(--gray-dim);
+.zone-svg { width: 100%; height: 100%; display: block; }
+.zone-line { stroke: var(--gold-2); stroke-opacity: 0.4; stroke-width: 1.2; fill: none; }
+.zone-pin-dot { fill: var(--gold-2); }
+.zone-pin-glow { fill: var(--gold-2); opacity: 0.22; }
+.zone-pin-label {
+  fill: var(--white);
+  font-family: var(--ff-body);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.zone-pin-main .zone-pin-dot { fill: var(--gold-2); }
+.zone-pin-main .zone-pin-glow { opacity: 0.4; }
+.zone-city-main {
+  fill: var(--white);
+  font-family: var(--ff-body);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.zone-city-sub {
+  fill: var(--gray);
   font-family: var(--ff-body);
   font-size: 10px;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
 }
-.zone-pin-main circle { r: 4; }
-.zone-pin-main text {
-  fill: var(--white);
+.zone-other-label {
+  fill: var(--gray);
   font-family: var(--ff-heading);
   font-style: italic;
-  font-size: 16px;
+  font-size: 13px;
 }
-.zone-compass { stroke: var(--gray-dim); fill: var(--gray-dim); }
 .zone-scale {
   position: absolute;
   left: 20px;

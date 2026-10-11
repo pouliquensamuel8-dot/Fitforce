@@ -317,40 +317,83 @@
         </div>
       </div>
       <div class="zone-map reveal">
-        <svg viewBox="0 0 420 320" class="zone-svg" role="img" aria-label="Carte stylisée de la zone d'intervention Fit Force autour de Rennes">
-          <line x1="210" y1="0" x2="210" y2="320" class="zone-cross"/>
-          <line x1="0" y1="160" x2="420" y2="160" class="zone-cross"/>
-          <circle cx="210" cy="160" r="150" class="zone-ring"/>
-          <circle cx="210" cy="160" r="105" class="zone-ring"/>
-          <circle cx="210" cy="160" r="60" class="zone-ring"/>
-          <g class="zone-compass" transform="translate(374,42)">
-            <path d="M0 -13 L5 8 L0 3 L-5 8 Z"/>
-            <text x="0" y="-19" text-anchor="middle" font-size="10" font-family="var(--ff-body)">N</text>
+        <svg viewBox="0 0 440 340" class="zone-svg" role="img" aria-label="Carte stylisée de la zone d'intervention Fit Force autour de Rennes et son agglomération">
+          <defs>
+            <radialGradient id="zoneTerrain" cx="50%" cy="50%" r="75%">
+              <stop offset="0%" stop-color="#1f2415"/>
+              <stop offset="55%" stop-color="#14170f"/>
+              <stop offset="100%" stop-color="#0a0b07"/>
+            </radialGradient>
+            <radialGradient id="zoneGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ddc38c" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#ddc38c" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="zoneBlur" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="6"/>
+            </filter>
+            <path id="zonePin" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          </defs>
+
+          <rect width="440" height="340" fill="url(#zoneTerrain)"/>
+          <g opacity="0.5" fill="#262b18">
+            <ellipse cx="90" cy="70" rx="90" ry="55" filter="url(#zoneBlur)"/>
+            <ellipse cx="360" cy="90" rx="100" ry="60" filter="url(#zoneBlur)"/>
+            <ellipse cx="70" cy="280" rx="95" ry="60" filter="url(#zoneBlur)"/>
+            <ellipse cx="380" cy="270" rx="90" ry="55" filter="url(#zoneBlur)"/>
           </g>
-          <g class="zone-pin zone-pin-main" transform="translate(210,160)">
-            <circle r="4"/>
-            <text y="-18" text-anchor="middle">Rennes</text>
+          <path d="M-10 230 Q130 200 170 160 T300 110 Q360 85 460 55" stroke="#ddc38c" stroke-opacity="0.14" stroke-width="4" fill="none"/>
+
+          <circle cx="220" cy="165" r="95" fill="url(#zoneGlow)"/>
+
+          <g class="zone-line">
+            <path d="M220 165 Q290 110 335 100"/>
+            <path d="M220 165 Q165 95 150 62"/>
+            <path d="M220 165 Q180 230 195 278"/>
+            <path d="M220 165 Q130 215 82 232"/>
+            <path d="M220 165 Q290 215 330 232"/>
+            <path d="M220 165 Q130 130 62 148"/>
           </g>
-          <g class="zone-pin" transform="translate(300,110)">
-            <circle r="5"/>
-            <text y="-14" text-anchor="middle">Cesson-Sévigné</text>
-          </g>
-          <g class="zone-pin" transform="translate(150,85)">
-            <circle r="5"/>
-            <text y="-14" text-anchor="middle">Saint-Grégoire</text>
-          </g>
-          <g class="zone-pin" transform="translate(170,250)">
-            <circle r="5"/>
-            <text y="18" text-anchor="middle">Bruz</text>
-          </g>
-          <g class="zone-pin" transform="translate(300,215)">
-            <circle r="5"/>
-            <text y="18" text-anchor="middle">Chantepie</text>
-          </g>
-          <g class="zone-pin" transform="translate(95,175)">
-            <circle r="5"/>
-            <text y="18" text-anchor="middle">Pacé</text>
-          </g>
+
+          <!-- Cesson-Sévigné -->
+          <circle class="zone-pin-glow" cx="335" cy="91" r="9" filter="url(#zoneBlur)"/>
+          <g transform="translate(323,78)"><use href="#zonePin" class="zone-pin-dot"/><circle cx="12" cy="9" r="2.6" fill="#0b0a08"/></g>
+          <text x="349" y="95" text-anchor="start" class="zone-pin-label">Cesson-Sévigné</text>
+
+          <!-- Saint-Grégoire -->
+          <circle class="zone-pin-glow" cx="150" cy="53" r="9" filter="url(#zoneBlur)"/>
+          <g transform="translate(138,40)"><use href="#zonePin" class="zone-pin-dot"/><circle cx="12" cy="9" r="2.6" fill="#0b0a08"/></g>
+          <text x="150" y="42" text-anchor="middle" class="zone-pin-label">Saint-Grégoire</text>
+
+          <!-- Bruz -->
+          <circle class="zone-pin-glow" cx="195" cy="269" r="9" filter="url(#zoneBlur)"/>
+          <g transform="translate(183,256)"><use href="#zonePin" class="zone-pin-dot"/><circle cx="12" cy="9" r="2.6" fill="#0b0a08"/></g>
+          <text x="195" y="297" text-anchor="middle" class="zone-pin-label">Bruz</text>
+
+          <!-- Saint-Jacques-de-la-Lande -->
+          <circle class="zone-pin-glow" cx="82" cy="223" r="9" filter="url(#zoneBlur)"/>
+          <g transform="translate(70,210)"><use href="#zonePin" class="zone-pin-dot"/><circle cx="12" cy="9" r="2.6" fill="#0b0a08"/></g>
+          <text x="96" y="232" text-anchor="start" class="zone-pin-label">Saint-Jacques-de-la-Lande</text>
+
+          <!-- Chantepie -->
+          <circle class="zone-pin-glow" cx="330" cy="223" r="9" filter="url(#zoneBlur)"/>
+          <g transform="translate(318,210)"><use href="#zonePin" class="zone-pin-dot"/><circle cx="12" cy="9" r="2.6" fill="#0b0a08"/></g>
+          <text x="344" y="240" text-anchor="start" class="zone-pin-label">Chantepie</text>
+
+          <!-- Pacé -->
+          <circle class="zone-pin-glow" cx="62" cy="139" r="9" filter="url(#zoneBlur)"/>
+          <g transform="translate(50,126)"><use href="#zonePin" class="zone-pin-dot"/><circle cx="12" cy="9" r="2.6" fill="#0b0a08"/></g>
+          <text x="48" y="152" text-anchor="end" class="zone-pin-label">Pacé</text>
+
+          <!-- Et bien d'autres... -->
+          <circle class="zone-pin-glow" cx="365" cy="291" r="7" filter="url(#zoneBlur)" opacity="0.5"/>
+          <g transform="translate(355,280) scale(0.8)" opacity="0.7"><use href="#zonePin" class="zone-pin-dot"/><circle cx="12" cy="9" r="2.6" fill="#0b0a08"/></g>
+          <text x="352" y="304" text-anchor="end" class="zone-other-label">Et bien d'autres&#8230;</text>
+
+          <!-- Rennes (centre) -->
+          <circle class="zone-pin-glow zone-pin-main" cx="220" cy="151" r="16" filter="url(#zoneBlur)"/>
+          <g transform="translate(220,165) scale(1.6) translate(-12,-22)"><use href="#zonePin" class="zone-pin-dot zone-pin-main"/><circle cx="12" cy="9" r="2.6" fill="#0b0a08"/></g>
+          <text x="220" y="202" text-anchor="middle" class="zone-city-main">RENNES</text>
+          <text x="220" y="218" text-anchor="middle" class="zone-city-sub">ET AGGLOMÉRATION</text>
         </svg>
         <span class="zone-scale">RENNES &amp; AGGLOMÉRATION</span>
       </div>
