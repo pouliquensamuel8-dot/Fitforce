@@ -374,8 +374,9 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--border);
   aspect-ratio: 4/3;
   overflow: hidden;
+  background: #0a0b06 url("../assets/zone-map.jpg") center / cover no-repeat;
 }
-.zone-svg { width: 100%; height: 100%; display: block; }
+.zone-svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .zone-line { stroke: var(--gold-2); stroke-opacity: 0.4; stroke-width: 1.2; fill: none; }
 .zone-pin-dot { fill: var(--gold-2); }
 .zone-pin-glow { fill: var(--gold-2); opacity: 0.22; }
